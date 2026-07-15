@@ -399,7 +399,7 @@
         <h2>Method</h2>
         <div class="figure-container">
             <img src="./fig/framework.png" alt="FoMoVLA Framework">
-            <p class="figure-caption"><b>Overview of FoMoVLA.</b> Given a current observation and language instruction, the VLM backbone processes image tokens alongside K learnable &lt;Foresight&gt; tokens. The framework comprises three synergistic branches that jointly learn future visual prediction and 2D motion tracking within a shared VLM backbone.</p>
+            <p class="figure-caption"><b>Overview of FoMoVLA.</b> Given a current observation and language instruction, the VLM backbone processes image tokens (with text tokens placed first for goal-aware conditioning) alongside K learnable &lt;Foresight&gt; tokens.</p>
         </div>
 
         <div class="method-cards">
@@ -512,13 +512,13 @@
         <h3>Qualitative Results on LIBERO</h3>
         <div class="figure-container">
             <img src="./fig/vis.png" alt="Qualitative Results">
-            <p class="figure-caption"><b>Qualitative results of FoMoVLA.</b> We visualize current observation features, GT future frame features, predicted foresight from &lt;Foresight&gt; tokens, and predicted vs. GT point tracks. The predicted foresight closely matches GT future features, and predicted tracks align with GT motion directions.</p>
+            <p class="figure-caption"><b>Qualitative results of FoMoVLA.</b> FoMoVLA effectively learns future features and point tracking.</p>
         </div>
 
         <h3>Effect of FCCA</h3>
         <div class="figure-container">
             <img src="./fig/fcca.png" alt="Effect of FCCA">
-            <p class="figure-caption"><b>Effect of FCCA on point tracking quality.</b> Without FCCA (left), predicted trajectories exhibit incorrect displacement directions. With FCCA (right), future-conditioned cross-attention corrects the motion predictions to align with actual object motion.</p>
+            <p class="figure-caption"><b>Effect of FCCA on point tracking.</b> Conditioning point tracking on visual foresight yields trajectories aligned with action dynamics.</p>
         </div>
     </div>
 </section>
