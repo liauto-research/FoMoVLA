@@ -98,6 +98,28 @@
             margin-top: 6px;
         }
 
+        .paper-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            color: #fff;
+            background: var(--accent);
+            border: none;
+            transition: all 0.25s;
+            box-shadow: var(--shadow-sm);
+            margin-top: 16px;
+        }
+
+        .paper-btn:hover {
+            background: var(--accent-2);
+            box-shadow: var(--shadow);
+            transform: translateY(-2px);
+        }
 
         /* ===== Sections ===== */
         section {
@@ -380,6 +402,10 @@
         <div class="author-notes">
             * Equal contribution &nbsp; &#8225; Project lead &nbsp; &dagger; Corresponding author
         </div>
+
+        <a href="https://arxiv.org/abs/2607.14739" class="paper-btn">
+            <i class="fas fa-file-pdf"></i> Paper on arXiv
+        </a>
     </div>
 </div>
 
