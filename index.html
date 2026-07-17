@@ -551,12 +551,41 @@
     </div>
 </section>
 
+<!-- BibTeX -->
+<section>
+    <div class="container">
+        <h2>Citation</h2>
+        <div style="position: relative; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px 28px; margin-top: 14px;">
+            <button onclick="copyBibtex()" style="position: absolute; top: 12px; right: 12px; background: #0f172a; color: white; border: none; border-radius: 6px; padding: 5px 12px; font-size: 0.75rem; cursor: pointer; transition: all 0.15s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'"><i class="fas fa-copy"></i> Copy</button>
+            <pre style="font-family: 'JetBrains Mono', 'SF Mono', monospace; font-size: 0.8rem; line-height: 1.65; white-space: pre; margin: 0; overflow-x: auto; color: #1e293b;"><code id="bibtex-text">@misc{li2026fomovlabridgingvisualforesight,
+      title={FoMoVLA: Bridging Visual Foresight and Motion Guidance for Vision-Language-Action Models},
+      author={Wei Li and Peijin Jia and Yuan Ma and Xuefeng Jiang and Titong Jiang and Sheng Sun and Yujian Li and Xin Wen and Han Hong and Zhikang Liu and Bailin Li and Kun Zhan},
+      year={2026},
+      eprint={2607.14739},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2607.14739}
+}</code></pre>
+        </div>
+    </div>
+</section>
+
 <footer>
     <div class="container">
         <p>FoMoVLA &copy; 2027 | LiAuto</p>
         <p style="margin-top:4px;">Template inspired by <a href="https://nerfies.github.io">Nerfies</a></p>
     </div>
 </footer>
+<script>
+function copyBibtex() {
+    const bibtex = document.getElementById('bibtex-text').innerText;
+    navigator.clipboard.writeText(bibtex).then(() => {
+        const btn = event.target.closest('button');
+        btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        setTimeout(() => { btn.innerHTML = '<i class="fas fa-copy"></i> Copy'; }, 2000);
+    });
+}
+</script>
 
 </body>
 </html>
